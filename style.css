@@ -32,6 +32,17 @@ h2{font-size:clamp(26px,5.5vw,38px)}
 .game p{margin:0 0 14px;max-width:44ch}
 .pill{display:inline-block;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--night);background:var(--coral);border-radius:999px;padding:16px 28px;margin-top:10px;text-decoration:none}
 .pill[aria-disabled=true]{cursor:default}
+.app-icon{width:72px;height:72px;border-radius:18px;display:block;margin:0 0 18px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+/* the second game keeps its own warm paper look inside the same site */
+.game+.game{margin-top:-24px}
+.game.paper{background:var(--paper);color:var(--ink)}
+.game.paper .label{color:#6a76a0;opacity:1}
+.game.paper h2{font-weight:500;letter-spacing:.02em}
+.game.paper h2 .sub{display:block;font-size:12px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#6a76a0;margin-top:10px}
+.game.paper p{color:#3a4670}
+.game.paper .facts li{color:#c0522c}
+.game.paper .shots img{box-shadow:0 8px 22px rgba(20,28,60,.22)}
+@media(min-width:760px){.game.flip .shots{order:-1}}
 a.pill:hover{color:var(--night);filter:brightness(1.07)}
 .facts{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px}
 .facts li{font-size:12px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
